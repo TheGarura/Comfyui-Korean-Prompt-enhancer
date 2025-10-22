@@ -19,7 +19,6 @@ The `Korean Prompt Enhancer` is a ComfyUI custom node that uses a Large Language
 ## 3. Installation
 
 1.  **Download Node**: Place the `comfyui-korean-prompt-enhancer` folder inside your `ComfyUI/custom_nodes/` directory.
-
     ```
     ComfyUI/custom_nodes/comfyui-korean-prompt-enhancer/
     ```
@@ -35,31 +34,31 @@ The `Korean Prompt Enhancer` is a ComfyUI custom node that uses a Large Language
 
 ## 4. Inputs
 
-| Name                               | Description                                                                                                                    |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `korean_prompt`                    | Enter the core description of Subject 1 in Korean (e.g., `a beautiful woman in a hanbok`).                                     |
-| `target_language`                  | Select the final language for the prompt.                                                                                      |
-| `llm_provider`                     | Select the LLM provider to use (gemini, chatGPT, Claude).                                                                      |
-| `model_name`                       | Enter the specific model name for the chosen provider (e.g., `gemini-1.5-flash-latest`, `gpt-4o`, `claude-3-sonnet-20240229`). |
-| `subject_2_prompt`                 | (Optional) Enter a description for a second subject in Korean. Filling this enables complex scene mode.                        |
-| `composition_description`          | (Optional) Describe the relationship between the two subjects or the overall scene composition.                                |
-| `style`                            | Select the overall style of the image. Set to `auto` for the LLM to recommend one.                                             |
-| `artist_style_keywords`            | Enter specific artists or styles to emulate (e.g., `by Hayao Miyazaki`).                                                       |
-| `ethnicity`, `age`, `gender`       | (Single Subject Mode) Set the ethnicity, age, and gender of the subject. `ethnicity` can be set to `auto`.                     |
-| `camera_angle`, `lens`, `lighting` | Select the shot composition, lens, and lighting effects. All can be set to `auto`.                                             |
-| `num_variations`                   | Set the number of prompt variations to generate.                                                                               |
-| `temperature`                      | Adjust the creativity of the LLM (0.0-2.0). Lower values are more consistent; higher values are more creative.                 |
-| `generate_intelligent_negative`    | If set to `True`, the LLM will automatically generate a negative prompt based on the positive prompt.                          |
-| `*_api_key`                        | Enter the appropriate API key for each LLM provider.                                                                           |
-| `negative_prompt`                  | Enter any basic negative prompts you want to add yourself.                                                                     |
+| Name                          | Description                                                                                                                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `korean_prompt`               | Enter the core description of Subject 1 in Korean (e.g., `a beautiful woman in a hanbok`).                                                 |
+| `target_language`             | Select the final language for the prompt.                                                                                                  |
+| `llm_provider`                | Select the LLM provider to use (gemini, chatGPT, Claude).                                                                                  |
+| `model_name`                  | Enter the specific model name for the chosen provider (e.g., `gemini-1.5-flash-latest`, `gpt-4o`, `claude-3-sonnet-20240229`).      |
+| `subject_2_prompt`            | (Optional) Enter a description for a second subject in Korean. Filling this enables complex scene mode.                                    |
+| `composition_description`     | (Optional) Describe the relationship between the two subjects or the overall scene composition.                                            |
+| `style`                       | Select the overall style of the image. Set to `auto` for the LLM to recommend one.                                                       |
+| `artist_style_keywords`       | Enter specific artists or styles to emulate (e.g., `by Hayao Miyazaki`).                                                                 |
+| `ethnicity`, `age`, `gender`  | (Single Subject Mode) Set the ethnicity, age, and gender of the subject. `ethnicity` can be set to `auto`.                                 |
+| `camera_angle`, `lens`, `lighting` | Select the shot composition, lens, and lighting effects. All can be set to `auto`.                                                       |
+| `num_variations`              | Set the number of prompt variations to generate.                                                                                           |
+| `temperature`                 | Adjust the creativity of the LLM (0.0-2.0). Lower values are more consistent; higher values are more creative.                             |
+| `generate_intelligent_negative` | If set to `True`, the LLM will automatically generate a negative prompt based on the positive prompt.                                      |
+| `*_api_key`                   | Enter the appropriate API key for each LLM provider.                                                                                       |
+| `negative_prompt`             | Enter any basic negative prompts you want to add yourself.                                                                               |
 
 ## 5. Outputs
 
-| Name                     | Description                                                                                                                    |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `enhanced_prompts_batch` | The final batch of generated positive prompts. If `num_variations` > 1, multiple prompts will be included.                     |
-| `final_negative_prompt`  | The final combined negative prompt, including user input, default negatives, and (optionally) the intelligent negative prompt. |
-| `metadata`               | A JSON text containing all the settings used to generate the prompt. Useful for reproducibility and analysis.                  |
+| Name                      | Description                                                                                                                                |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `enhanced_prompts_batch`  | The final batch of generated positive prompts. If `num_variations` > 1, multiple prompts will be included.                                   |
+| `final_negative_prompt`   | The final combined negative prompt, including user input, default negatives, and (optionally) the intelligent negative prompt.             |
+| `metadata`                | A JSON text containing all the settings used to generate the prompt. Useful for reproducibility and analysis.                                |
 
 ---
 
@@ -82,7 +81,6 @@ The `Korean Prompt Enhancer` is a ComfyUI custom node that uses a Large Language
 ## 3. 설치 방법
 
 1.  **노드 다운로드**: `comfyui-korean-prompt-enhancer` 폴더를 ComfyUI의 `custom_nodes` 디렉토리 내에 위치시킵니다.
-
     ```
     ComfyUI/custom_nodes/comfyui-korean-prompt-enhancer/
     ```
@@ -98,28 +96,28 @@ The `Korean Prompt Enhancer` is a ComfyUI custom node that uses a Large Language
 
 ## 4. 입력(Inputs) 설명
 
-| 이름                               | 설명                                                                                                                      |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `korean_prompt`                    | 주체 1에 대한 핵심 설명을 한국어로 입력합니다. (예: `한복을 입은 아름다운 여성`)                                          |
-| `target_language`                  | 프롬프트가 번역될 최종 언어를 선택합니다.                                                                                 |
-| `llm_provider`                     | 사용할 LLM 공급자를 선택합니다. (gemini, chatGPT, Claude)                                                                 |
-| `model_name`                       | `llm_provider`에서 사용할 상세 모델명을 입력합니다. (예: `gemini-1.5-flash-latest`, `gpt-4o`, `claude-3-sonnet-20240229`) |
-| `subject_2_prompt`                 | (선택) 장면에 추가할 두 번째 주체를 한국어로 입력합니다. 이 필드를 채우면 복합 장면 구성 모드로 작동합니다.               |
-| `composition_description`          | (선택) 두 주체의 관계나 장면 전체의 구성을 서술합니다. (예: `1번 주체가 2번 주체의 어깨에 기대어 있다`)                   |
-| `style`                            | 이미지의 전체적인 스타일을 선택합니다. `auto`로 설정 시 LLM이 추천합니다.                                                 |
-| `artist_style_keywords`            | 참고하고 싶은 특정 아티스트나 화풍을 텍스트로 입력합니다. (예: `by Hayao Miyazaki`)                                       |
-| `ethnicity`, `age`, `gender`       | (단일 주체 모드) 주체의 인종, 나이, 성별을 설정합니다. `ethnicity`는 `auto` 설정이 가능합니다.                            |
-| `camera_angle`, `lens`, `lighting` | 촬영 구도, 렌즈, 조명 효과를 선택합니다. 모두 `auto` 설정이 가능합니다.                                                   |
-| `num_variations`                   | 생성할 프롬프트 변형의 개수를 정합니다.                                                                                   |
-| `temperature`                      | LLM의 창의성을 조절합니다. (0.0~2.0, 낮을수록 일관적, 높을수록 창의적)                                                    |
-| `generate_intelligent_negative`    | `True`로 설정 시, 생성된 긍정 프롬프트에 맞춰 LLM이 네거티브 프롬프트를 자동으로 생성합니다.                              |
-| `*_api_key`                        | 각 LLM 공급자에 맞는 API 키를 입력합니다.                                                                                 |
-| `negative_prompt`                  | 사용자가 직접 추가하고 싶은 기본 네거티브 프롬프트를 입력합니다.                                                          |
+| 이름                          | 설명                                                                                                                                |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `korean_prompt`               | 주체 1에 대한 핵심 설명을 한국어로 입력합니다. (예: `한복을 입은 아름다운 여성`)                                                        |
+| `target_language`             | 프롬프트가 번역될 최종 언어를 선택합니다.                                                                                           |
+| `llm_provider`                | 사용할 LLM 공급자를 선택합니다. (gemini, chatGPT, Claude)                                                                           |
+| `model_name`                  | `llm_provider`에서 사용할 상세 모델명을 입력합니다. (예: `gemini-1.5-flash-latest`, `gpt-4o`, `claude-3-sonnet-20240229`)         |
+| `subject_2_prompt`            | (선택) 장면에 추가할 두 번째 주체를 한국어로 입력합니다. 이 필드를 채우면 복합 장면 구성 모드로 작동합니다.                      |
+| `composition_description`     | (선택) 두 주체의 관계나 장면 전체의 구성을 서술합니다. (예: `1번 주체가 2번 주체의 어깨에 기대어 있다`)                       |
+| `style`                       | 이미지의 전체적인 스타일을 선택합니다. `auto`로 설정 시 LLM이 추천합니다.                                                         |
+| `artist_style_keywords`       | 참고하고 싶은 특정 아티스트나 화풍을 텍스트로 입력합니다. (예: `by Hayao Miyazaki`)                                                 |
+| `ethnicity`, `age`, `gender`  | (단일 주체 모드) 주체의 인종, 나이, 성별을 설정합니다. `ethnicity`는 `auto` 설정이 가능합니다.                                   |
+| `camera_angle`, `lens`, `lighting` | 촬영 구도, 렌즈, 조명 효과를 선택합니다. 모두 `auto` 설정이 가능합니다.                                                          |
+| `num_variations`              | 생성할 프롬프트 변형의 개수를 정합니다.                                                                                             |
+| `temperature`                 | LLM의 창의성을 조절합니다. (0.0~2.0, 낮을수록 일관적, 높을수록 창의적)                                                              |
+| `generate_intelligent_negative` | `True`로 설정 시, 생성된 긍정 프롬프트에 맞춰 LLM이 네거티브 프롬프트를 자동으로 생성합니다.                                        |
+| `*_api_key`                   | 각 LLM 공급자에 맞는 API 키를 입력합니다.                                                                                           |
+| `negative_prompt`             | 사용자가 직접 추가하고 싶은 기본 네거티브 프롬프트를 입력합니다.                                                                    |
 
 ## 5. 출력(Outputs) 설명
 
-| 이름                     | 설명                                                                                                           |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| `enhanced_prompts_batch` | 최종적으로 생성된 긍정 프롬프트 묶음입니다. (`num_variations` > 1일 경우, 여러 프롬프트가 포함됩니다.)         |
-| `final_negative_prompt`  | 사용자가 입력한 네거티브, 기본 네거티브, 그리고 (옵션에 따라) 지능형 네거티브가 모두 조합된 최종 결과물입니다. |
-| `metadata`               | 프롬프트 생성에 사용된 모든 설정값이 JSON 형식으로 저장된 텍스트입니다. 재현 및 분석에 유용합니다.             |
+| 이름                      | 설명                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------ |
+| `enhanced_prompts_batch`  | 최종적으로 생성된 긍정 프롬프트 묶음입니다. (`num_variations` > 1일 경우, 여러 프롬프트가 포함됩니다.) |
+| `final_negative_prompt`   | 사용자가 입력한 네거티브, 기본 네거티브, 그리고 (옵션에 따라) 지능형 네거티브가 모두 조합된 최종 결과물입니다. |
+| `metadata`                | 프롬프트 생성에 사용된 모든 설정값이 JSON 형식으로 저장된 텍스트입니다. 재현 및 분석에 유용합니다.      |
