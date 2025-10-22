@@ -58,3 +58,4 @@
 | `final_negative_prompt`   | 사용자가 입력한 네거티브, 기본 네거티브, 그리고 (옵션에 따라) 지능형 네거티브가 모두 조합된 최종 결과물입니다. |
 | `metadata`                | 프롬프트 생성에 사용된 모든 설정값이 JSON 형식으로 저장된 텍스트입니다. 재현 및 분석에 유용합니다.      |
 
+# Comfyui-Korean-Prompt-enhancer
