@@ -89,3 +89,4 @@ class LLMIntegration:
         except Exception as e:
             print(f"[LLMIntegration 오류] Anthropic API 호출 실패: {e}")
             return None # 실패 신호로 None을 반환
+        

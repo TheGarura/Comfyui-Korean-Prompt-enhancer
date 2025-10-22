@@ -144,4 +144,4 @@ NODE_CLASS_MAPPINGS = {
 # ComfyUI 메뉴에 표시될 노드의 이름을 지정합니다.
 NODE_DISPLAY_NAME_MAPPINGS = {
     "KoreanPromptEnhancer": "Korean Prompt Enhancer (LLM/Fallback)"
-}
+} 
