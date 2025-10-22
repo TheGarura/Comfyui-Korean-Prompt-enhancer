@@ -1,0 +1,13 @@
+[project]
+name = "comfyui-korean-prompt-enhancer"
+description = "A custom node for creative Korean prompt enhancement in ComfyUI, supporting multi-LLM and rich image prompt generation."
+version = "0.0.1"
+license = { file = "LICENSE" }
+
+[project.urls]
+Repository = "https://github.com/TheGarura/Comfyui-Korean-Prompt-enhancer"
+
+[tool.comfy]
+PublisherId = "garura"
+DisplayName = "ComfyUI-Korean-Prompt-Enhancer"
+Icon = ""

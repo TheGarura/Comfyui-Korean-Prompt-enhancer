@@ -4,6 +4,7 @@ from .llm_integration import LLMIntegration
 # 메타데이터 생성을 위해 json 라이브러리를 가져옵니다.
 import json
 
+
 # ComfyUI 커스텀 노드의 메인 클래스입니다.
 class KoreanPromptEnhancer:
     @classmethod
